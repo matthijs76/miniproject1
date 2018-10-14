@@ -3,6 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="styles.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Bitter|Charmonman|Exo|Mali|Oleo+Script+Swash+Caps|Roboto" rel="stylesheet">
 <title>Mini project week 2</title>
 <script>
 	
@@ -31,20 +32,24 @@
     <a href="contact.html">Contact</a>
     <a href="boeking_info.html">Boeking info</a>
     <div id="btn1" class="btn">Click1</div>
-      <div id="btn2" class="btn">Click2</div>
-      <div id="btn3" class="btn">Click3</div>
+    <div id="btn2" class="btn">Click2</div>
+    <div id="btn3" class="btn">Click3</div>
+    <div id="btn4" class="btn">Click4</div>
+    <div id="btn5" class="btn">Click5</div>
+    <div id="btn6" class="btn">Click6</div>
+    
     
   </div>
 
   <div class="main">
-	  <H1>Dikke Bertha koffie op kolen</H1>
+	  <H1 id="titel">Dikke Bertha koffie op kolen</H1>
     
-    <h2>KOFFIE OP KOLEN?</h2>
+    <h2 id="secTitel">KOFFIE OP KOLEN?</h2>
     <p>
       Dikke Bertha is een victoriaans ogend, op steenkolen gestookt espressoapparaat. Haar koffiemachinisten nemen je mee naar de tijd van de industriële revolutie. Toen roetwolken de zon verduisterden en de mannen van staal waren.
-      Koffie was het zwarte goud, en dat stroomt nog steeds uit Dikke Bertha.
+      Koffie was het zwarte goud, en dat stroomt nog steeds uit Dikke Bertha.</p>
       
-      Of nou met stoomgeschuimde melk versneden tot cappuccino, of puur en eerlijk als espresso geserveerd – Bertha’s koffie is een hele ervaring.
+    <p>Of nou met stoomgeschuimde melk versneden tot cappuccino, of puur en eerlijk als espresso geserveerd – Bertha’s koffie is een hele ervaring.
       Wie zin in zoet heeft geniet van de verrukkelijke Brownies, gebakken door Tante Bertha persoonlijk.
       Desgewenst brouwen de koffiemachinisten ook carajillo: een sterke koffie met een flinke scheut spaanse brandewijn.
     </p>
@@ -54,10 +59,66 @@
   </div>
 </div>
 
-<footer>© voetje</footer>
+<footer>© <b>Dikke Bertha</b></footer>
+
+
+<script>
+  console.dir(document);
+  var btn1 =document.getElementById("btn1");
+  var btn2 =document.getElementById("btn2");
+  var btn3 =document.getElementById("btn3");
+  var btn4 =document.getElementById("btn4");
+  var btn5 =document.getElementById("btn5");
+  var btn6 =document.getElementById("btn6");
+  
+
+
+  btn1.onclick = funcBlack1;
+  btn2.onclick = funcBlack2;
+  btn3.onclick = funcWhite1;
+  btn4.onclick = funcWhite2;
+  btn5.onclick = funcBlue1;
+  btn6.onclick = funcBlue2;
+
+  function funcBlack1() {
+    document.getElementById("output").innerHTML = "Zwart optie1";
+    document.getElementById("titel").style.fontFamily ="'Abril Fatface', cursive";
+    document.getElementById("secTitel").style.fontFamily = "'Bitter', serif";
+    document.getElementsByTagName("p").style.fontFamily = "'Bitter', serif";
+    document.body.style.backgroundColor = "black";
+  
+  
+    
+  }
+
+  function funcBlack2() {
+    document.getElementById("output").innerHTML = "Zwart optie2";
+    
+  }
+  function funcWhite1() {
+    document.getElementById("output").innerHTML = "Wit optie1";
+    
+    document.body.style.backgroundColor = "white"; 
+  }
+  function funcWhite2() {
+    document.getElementById("output").innerHTML = "Wit optie2";
+    
+    document.body.style.backgroundColor = "white"; 
+  }
+  function funcBlue1() {
+    document.getElementById("output").innerHTML = "Blauw optie1";
+    
+    document.body.style.backgroundColor = "#92B7FE"; 
+  }
+  function funcBlue2() {
+    document.getElementById("output").innerHTML = "Blauw optie2";
+    
+    document.body.style.backgroundColor = "blue"; 
+  }
 
 
 
+</script>
 
 
 </body>

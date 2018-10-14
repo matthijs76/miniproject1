@@ -52,10 +52,12 @@ body {
   width:60%;
   padding:0 20px;
   color: whitesmoke;
-  background-color: black;
+  background-color: rgba(00, 00, 00, 00);
+  font-family: 'Roboto', sans-serif;
 }
 .main h1, h2 {
   text-align: center;
+  font-family: 'Roboto', sans-serif;
 }
 .mainpic {
   background-image: url("images/de_langzame_mannen.png");
@@ -88,14 +90,16 @@ body {
   -webkit-filter: grayscale(95%);
   filter: grayscale(95%); 
   text-align:center;
-  background-color: black;
+  background-color: rgba(00, 00, 00, 00);
   height: 400px;
   margin-top:7px;
 }
 footer {
-  background-color:#e5e5e5;
+  background-color:rgba(00, 00, 00, 00);
   text-align:center;
   padding:10px;margin-top:7px;
+  color: whitesmoke;
+  font-family: 'Roboto', sans-serif;
 }
 
 @media only screen and (max-width:620px) {
