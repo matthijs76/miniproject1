@@ -3,7 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="styles.css" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Bitter|Charmonman|Exo|Mali|Oleo+Script+Swash+Caps|Roboto" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Krub|Mali|Oleo+Script+Swash+Caps|Playfair+Display|Roboto" rel="stylesheet">
 <title>Mini project week 2</title>
 <script>
 	
@@ -12,12 +12,9 @@
 
 </head>
 <body>
-    
-		<div class="hero-image">
-		<div class="hero-text">
-        <div id="output">Not a thing</div> 
-        
-</div>
+  <div id="output">Standaard</div>
+		<div class="hero-image" id="top">
+		
     </div>
 
 <div class="strip" style="background-color: black;text-align:center;">
@@ -31,12 +28,12 @@
     <a href="miniproject1.html">Linktest3</a>    
     <a href="contact.html">Contact</a>
     <a href="boeking_info.html">Boeking info</a>
-    <div id="btn1" class="btn">Click1</div>
-    <div id="btn2" class="btn">Click2</div>
-    <div id="btn3" class="btn">Click3</div>
-    <div id="btn4" class="btn">Click4</div>
-    <div id="btn5" class="btn">Click5</div>
-    <div id="btn6" class="btn">Click6</div>
+    <button onclick="myFunction1()">zwart1</button>
+    <button onclick="myFunction2()">zwart2</button>
+    <button onclick="myFunction3()">wit1</button>
+    <button onclick="myFunction4()">wit2</button>
+    <button onclick="myFunction5()">lichtblauw</button>
+    <button onclick="myFunction6()">donkerblauw</button>
     
     
   </div>
@@ -45,11 +42,11 @@
 	  <H1 id="titel">Dikke Bertha koffie op kolen</H1>
     
     <h2 id="secTitel">KOFFIE OP KOLEN?</h2>
-    <p>
+    <p id="ptext">
       Dikke Bertha is een victoriaans ogend, op steenkolen gestookt espressoapparaat. Haar koffiemachinisten nemen je mee naar de tijd van de industriële revolutie. Toen roetwolken de zon verduisterden en de mannen van staal waren.
       Koffie was het zwarte goud, en dat stroomt nog steeds uit Dikke Bertha.</p>
       
-    <p>Of nou met stoomgeschuimde melk versneden tot cappuccino, of puur en eerlijk als espresso geserveerd – Bertha’s koffie is een hele ervaring.
+    <p id="ptext">Of nou met stoomgeschuimde melk versneden tot cappuccino, of puur en eerlijk als espresso geserveerd – Bertha’s koffie is een hele ervaring.
       Wie zin in zoet heeft geniet van de verrukkelijke Brownies, gebakken door Tante Bertha persoonlijk.
       Desgewenst brouwen de koffiemachinisten ook carajillo: een sterke koffie met een flinke scheut spaanse brandewijn.
     </p>
@@ -63,55 +60,55 @@
 
 
 <script>
-  console.dir(document);
-  var btn1 =document.getElementById("btn1");
-  var btn2 =document.getElementById("btn2");
-  var btn3 =document.getElementById("btn3");
-  var btn4 =document.getElementById("btn4");
-  var btn5 =document.getElementById("btn5");
-  var btn6 =document.getElementById("btn6");
   
 
-
-  btn1.onclick = funcBlack1;
-  btn2.onclick = funcBlack2;
-  btn3.onclick = funcWhite1;
-  btn4.onclick = funcWhite2;
-  btn5.onclick = funcBlue1;
-  btn6.onclick = funcBlue2;
-
-  function funcBlack1() {
+  function myFunction1() {
     document.getElementById("output").innerHTML = "Zwart optie1";
     document.getElementById("titel").style.fontFamily ="'Abril Fatface', cursive";
     document.getElementById("secTitel").style.fontFamily = "'Bitter', serif";
-    document.getElementsByTagName("p").style.fontFamily = "'Bitter', serif";
-    document.body.style.backgroundColor = "black";
+    document.getElementById("ptext").style.fontFamily = "'Bitter', serif";
+    //document.getElementById("strip.img").style.visibility = "hidden"; idmaken
+    
   
   
     
   }
 
-  function funcBlack2() {
+  function myFunction2() {
     document.getElementById("output").innerHTML = "Zwart optie2";
+    document.getElementById("titel").style.fontFamily = "'Oleo Script Swash Caps', cursive";
+    document.getElementById("secTitel").style.fontFamily = "'Mali', cursive";
+    document.getElementById("ptext").style.fontFamily = "'Krub', sans-serif";
+// lettertypes vergelijken id p verandweren fontSize?sectitel?
+    
     
   }
-  function funcWhite1() {
+  function myFunction3() {
     document.getElementById("output").innerHTML = "Wit optie1";
     
-    document.body.style.backgroundColor = "white"; 
-  }
-  function funcWhite2() {
-    document.getElementById("output").innerHTML = "Wit optie2";
+    document.getElementById("titel").style.color = "black";
+    document.getElementById("secTitel").style.color = "black";
+    document.getElementById("ptext").style.color = "black";
+    
     
     document.body.style.backgroundColor = "white"; 
   }
-  function funcBlue1() {
+  function myFunction4() {
+    document.getElementById("output").innerHTML = "Wit optie2";
+    document.body.style.color = "black";
+    
+    
+    document.body.style.backgroundColor = "white"; 
+  }
+  function myFunction5() {
     document.getElementById("output").innerHTML = "Blauw optie1";
+    // image zoeken...document.getElementById("top").style.backgroundImage = "url('')";
     
     document.body.style.backgroundColor = "#92B7FE"; 
   }
-  function funcBlue2() {
+  function myFunction6() {
     document.getElementById("output").innerHTML = "Blauw optie2";
+   
     
     document.body.style.backgroundColor = "blue"; 
   }
